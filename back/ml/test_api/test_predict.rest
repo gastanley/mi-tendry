@@ -1,0 +1,59 @@
+# POST    http://127.0.0.1:8000/api/auth/login
+# # Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1MDI4NjE1LCJpYXQiOjE3NjUwMjgzMTUsImp0aSI6ImU3ZmZhNDUxOTJjMTQyN2JiOTJmZWQ4MTEyODY0ZGE5IiwidXNlcl9pZCI6IjExIn0.W3HrL2FSVwnX6ZqVEQg0DRS-I26puqTuzgGOpeYjfQc
+# Content-Type: application/json
+
+# {
+#   "email": "test5@example.com",
+#   "password": "test123"
+# }
+
+# HTTP/1.1 201 Created
+# Date: Wed, 29 Oct 2025 22:52:42 GMT
+# Server: WSGIServer/0.2 CPython/3.12.3
+# Content-Type: application/json
+# Vary: Accept
+# Allow: POST, OPTIONS
+# X-Frame-Options: DENY
+# Content-Length: 204
+# X-Content-Type-Options: nosniff
+# Referrer-Policy: same-origin
+# Cross-Origin-Opener-Policy: same-origin
+
+# {
+#   "user": {
+#     "id": 3,
+#     "username": "testuser2",
+#     "email": "test2@example.com",
+#     "first_name": "Test2",
+#     "last_name": "User2"
+#   },
+#   "token": "0a8c7cc59bc7680ef8abebc357a7dac2a07734d3",
+#   "message": "Utilisateur créé avec succès"
+# }
+
+# id: 4
+# token: 2ebb18e785ae48f70e126bd61712a723a31b2d34
+
+# {
+#   "username": "Fens",
+#   "email": "fens@gmail.com",
+#   "password": "123",
+#   "first_name": "RAKOTO",
+#   "last_name": "Fenosoa"
+# }
+
+# test_predict.http
+
+POST http://127.0.0.1:8000/api/play/new
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MjYwMTUwLCJpYXQiOjE3NjYyNTk4NTAsImp0aSI6ImY3NWQ4MTM2MWRhMzQ2NWZhZTJhMDNlNGM0NWIxOTkxIiwidXNlcl9pZCI6IjEzIn0.oNWbPsbMpjoqaCVwoAf-kBM5w0463sCf9QxnU3hJ_Ek
+
+{
+  "file": "/home/tellar/Documents/DEV/Mi-tendry/back/ml/test_set_image/Berceuse.PNG"
+}
+
+# GET http://127.0.0.1:8000/api/play/predictions
+# Content-Type: application/json
+# Accept: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY2MjU3NTA3LCJpYXQiOjE3NjYyNTcyMDcsImp0aSI6IjBiZTUzOGYyZTA2NTQ2MWFiMmNmODZiZDg4NjlmOTNkIiwidXNlcl9pZCI6IjEzIn0.VUIcnFq73H47teTN3Rd9B_BrscxpUCpR1AUFb7HlF3Y
