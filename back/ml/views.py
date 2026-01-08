@@ -18,22 +18,43 @@ from rest_framework.permissions import IsAuthenticated
 
 from .serializer import PredictInputSerializer, PredictionResultSerializer
 from .models import PredictionResult
+import os
+from django.conf import settings
+
 
 
 # ============================================================
 # CONFIGURATIONS
 # ============================================================
 
-MODEL_PATH = "/home/tellar/Documents/DEV/Mi-tendry/back/ml/Nouveau_modele/V3/model_checkpoint_v3.keras"
-LABELS_PATH = "/home/tellar/Documents/DEV/Mi-tendry/back/ml/mapping_208_classes.txt"
-IMG_SIZE = 256
+# ============================================================
+# CONFIGURATIONS (CHEMINS GLOBAUX)
+# ============================================================
 
+BASE_DIR = settings.BASE_DIR
+
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "ml",
+    "Nouveau_modele",
+    "V3",
+    "model_checkpoint_v3.keras",
+)
+
+LABELS_PATH = os.path.join(
+    BASE_DIR,
+    "ml",
+    "mapping_208_classes.txt",
+)
+
+IMG_SIZE = 256
 
 # ============================================================
 # CHARGEMENT DU MODÈLE
 # ============================================================
 
-print("📦 Chargement du modèle ML...")
+print(f"📦 Chargement du modèle ML depuis : {MODEL_PATH}")
+
 try:
     model = load_model(MODEL_PATH, compile=False)
     print("✅ Modèle chargé avec succès")
